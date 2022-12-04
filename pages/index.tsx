@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Logo from '../public/vercel.svg'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import ExportedImage from "next-image-export-optimizer";
+import Logo from "../public/vercel.svg";
+import EarthImage from "../public/images/nasa.png";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -53,6 +54,17 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <div>
+          <ExportedImage
+            src={EarthImage}
+            useWebp
+            placeholder="empty"
+            width={300}
+            height={300}
+            alt="Earth"
+          />
+          <figcaption>Earth (NASA)</figcaption>
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -61,12 +73,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
-            <Image src={Logo} alt="Vercel Logo" width={72} height={16} />
+            <ExportedImage src={Logo} alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
