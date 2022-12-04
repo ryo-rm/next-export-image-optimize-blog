@@ -8,7 +8,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   basePath: process.env.GITHUB_ACTIONS ? GITHUB_PAGES_BASE_PATH : "",
-  assetPrefix: process.env.GITHUB_ACTIONS ? GITHUB_PAGES_BASE_PATH : "",
 }
 
 module.exports = nextConfig
